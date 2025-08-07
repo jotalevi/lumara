@@ -6,37 +6,32 @@
 }
 
 :root {
-    --lumara-gold: #FF6B35;
-    --lumara-orange: #F7931E;
-    --lumara-blue: #1E3A8A;
-    --lumara-dark: #0F172A;
-    --lumara-sunset-50: #FFF7ED;
-    --lumara-sunset-100: #FFEDD5;
-    --lumara-sunset-200: #FED7AA;
-    --lumara-sunset-300: #FDBA74;
-    --lumara-sunset-400: #FB923C;
-    --lumara-sunset-500: #F97316;
-    --lumara-sunset-600: #EA580C;
-    --lumara-sunset-700: #C2410C;
-    --lumara-sunset-800: #9A3412;
-    --lumara-sunset-900: #7C2D12;
-    --lumara-night-50: #EFF6FF;
-    --lumara-night-100: #DBEAFE;
-    --lumara-night-200: #BFDBFE;
-    --lumara-night-300: #93C5FD;
-    --lumara-night-400: #60A5FA;
-    --lumara-night-500: #3B82F6;
-    --lumara-night-600: #2563EB;
-    --lumara-night-700: #1D4ED8;
-    --lumara-night-800: #1E40AF;
-    --lumara-night-900: #1E3A8A;
+    /* Nueva paleta de colores estilo Burning Man */
+    --lumara-earth: #8B4513;
+    --lumara-sand: #F4A460;
+    --lumara-desert: #DEB887;
+    --lumara-dust: #D2B48C;
+    --lumara-clay: #CD853F;
+    --lumara-sunset: #D2691E;
+    --lumara-night: #2F4F4F;
+    --lumara-dark: #1C1C1C;
+    --lumara-light: #F5F5DC;
+    --lumara-cream: #FDF5E6;
+    --lumara-warm: #F4E4BC;
+    --lumara-neutral: #D3D3D3;
+    --lumara-text: #2F2F2F;
+    --lumara-text-light: #6B6B6B;
+    --lumara-accent: #B8860B;
+    --lumara-accent-light: #DAA520;
+    --lumara-accent-dark: #8B6914;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    color: var(--lumara-dark);
+    color: var(--lumara-text);
     overflow-x: hidden;
+    background-color: var(--lumara-cream);
 }
 
 .container {
@@ -50,7 +45,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(15, 23, 42, 0.95);
+    background: rgba(28, 28, 28, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: all 0.3s ease;
@@ -67,7 +62,7 @@ body {
 }
 
 .nav-logo h2 {
-    color: var(--lumara-gold);
+    color: var(--lumara-sand);
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
@@ -89,7 +84,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: var(--lumara-gold);
+    color: var(--lumara-sand);
 }
 
 .nav-menu a::after {
@@ -99,7 +94,7 @@ body {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background: var(--lumara-gold);
+    background: var(--lumara-sand);
     transition: width 0.3s ease;
 }
 
@@ -139,7 +134,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--lumara-gold) 0%, var(--lumara-orange) 50%, var(--lumara-blue) 100%);
+    background: linear-gradient(135deg, var(--lumara-earth) 0%, var(--lumara-sand) 30%, var(--lumara-desert) 60%, var(--lumara-night) 100%);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     z-index: -2;
@@ -213,7 +208,7 @@ body {
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--lumara-gold);
+    color: var(--lumara-sand);
 }
 
 .countdown-item label {
@@ -245,15 +240,15 @@ body {
 }
 
 .btn-primary {
-    background: var(--lumara-gold);
+    background: var(--lumara-earth);
     color: white;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.4);
 }
 
 .btn-primary:hover {
-    background: var(--lumara-orange);
+    background: var(--lumara-clay);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.6);
 }
 
 .btn-secondary {
@@ -269,15 +264,15 @@ body {
 }
 
 .btn-merch {
-    background: var(--lumara-blue);
+    background: var(--lumara-night);
     color: white;
-    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.4);
+    box-shadow: 0 4px 15px rgba(47, 79, 79, 0.4);
 }
 
 .btn-merch:hover {
-    background: var(--lumara-night-700);
+    background: var(--lumara-text);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(30, 58, 138, 0.6);
+    box-shadow: 0 6px 20px rgba(47, 79, 79, 0.6);
 }
 
 .hero-description {
@@ -295,7 +290,7 @@ body {
     font-weight: 700;
     text-align: center;
     margin-bottom: 3rem;
-    background: linear-gradient(135deg, var(--lumara-gold), var(--lumara-orange));
+    background: linear-gradient(135deg, var(--lumara-earth), var(--lumara-sand));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -304,7 +299,7 @@ body {
 /* Festival Section */
 .festival {
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--lumara-sunset-50) 0%, var(--lumara-night-50) 100%);
+    background: linear-gradient(135deg, var(--lumara-cream) 0%, var(--lumara-warm) 100%);
 }
 
 .festival-grid {
@@ -327,14 +322,14 @@ body {
 }
 
 .festival-card h3 {
-    color: var(--lumara-gold);
+    color: var(--lumara-earth);
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-family: 'Poppins', sans-serif;
 }
 
 .festival-card p {
-    color: #666;
+    color: var(--lumara-text-light);
     line-height: 1.6;
 }
 
@@ -343,11 +338,11 @@ body {
 }
 
 .map-placeholder {
-    background: linear-gradient(135deg, var(--lumara-sunset-200), var(--lumara-night-200));
+    background: linear-gradient(135deg, var(--lumara-desert), var(--lumara-dust));
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
-    color: var(--lumara-dark);
+    color: var(--lumara-text);
     font-weight: 600;
 }
 
@@ -358,21 +353,21 @@ body {
 }
 
 .schedule-day {
-    background: var(--lumara-sunset-50);
+    background: var(--lumara-warm);
     padding: 1rem;
     border-radius: 10px;
-    border-left: 4px solid var(--lumara-gold);
+    border-left: 4px solid var(--lumara-earth);
 }
 
 .schedule-day h4 {
-    color: var(--lumara-gold);
+    color: var(--lumara-earth);
     margin-bottom: 0.5rem;
 }
 
 .lineup-note {
     margin-top: 1rem;
     font-style: italic;
-    color: #888;
+    color: var(--lumara-text-light);
     font-size: 0.9rem;
 }
 
@@ -391,7 +386,7 @@ body {
     content: '✨';
     position: absolute;
     left: 0;
-    color: var(--lumara-gold);
+    color: var(--lumara-earth);
 }
 
 /* Merch Section */
@@ -406,7 +401,7 @@ body {
     margin: 0 auto 3rem;
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #666;
+    color: var(--lumara-text-light);
 }
 
 .merch-grid {
@@ -448,14 +443,14 @@ body {
 }
 
 .merch-item h3 {
-    color: var(--lumara-dark);
+    color: var(--lumara-text);
     font-size: 1.3rem;
     margin: 1rem 0 0.5rem;
     font-family: 'Poppins', sans-serif;
 }
 
 .price {
-    color: var(--lumara-gold);
+    color: var(--lumara-earth);
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -463,14 +458,14 @@ body {
 
 .merch-note {
     text-align: center;
-    color: #888;
+    color: var(--lumara-text-light);
     font-style: italic;
 }
 
 /* Lineup Section */
 .lineup {
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--lumara-night-50) 0%, var(--lumara-sunset-50) 100%);
+    background: linear-gradient(135deg, var(--lumara-warm) 0%, var(--lumara-cream) 100%);
 }
 
 .lineup-content {
@@ -487,7 +482,7 @@ body {
 }
 
 .lineup-announcement h3 {
-    color: var(--lumara-gold);
+    color: var(--lumara-earth);
     font-size: 1.8rem;
     margin-bottom: 1rem;
     font-family: 'Poppins', sans-serif;
@@ -496,13 +491,13 @@ body {
 .reveal-countdown {
     margin-top: 2rem;
     padding: 1rem;
-    background: var(--lumara-sunset-50);
+    background: var(--lumara-warm);
     border-radius: 10px;
-    border: 2px solid var(--lumara-gold);
+    border: 2px solid var(--lumara-earth);
 }
 
 .reveal-countdown span {
-    color: var(--lumara-gold);
+    color: var(--lumara-earth);
     font-weight: 700;
     font-size: 1.2rem;
 }
@@ -510,7 +505,7 @@ body {
 /* Inscripción Section */
 .inscripcion {
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--lumara-sunset-100) 0%, var(--lumara-night-100) 100%);
+    background: linear-gradient(135deg, var(--lumara-warm) 0%, var(--lumara-cream) 100%);
 }
 
 .inscripcion-intro {
@@ -519,7 +514,7 @@ body {
     margin: 0 auto 3rem;
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #666;
+    color: var(--lumara-text-light);
 }
 
 .inscripcion-form {
@@ -539,7 +534,7 @@ body {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: var(--lumara-dark);
+    color: var(--lumara-text);
 }
 
 .form-group input {
@@ -553,7 +548,7 @@ body {
 
 .form-group input:focus {
     outline: none;
-    border-color: var(--lumara-gold);
+    border-color: var(--lumara-earth);
 }
 
 .radio-group {
@@ -573,7 +568,7 @@ body {
 }
 
 .radio-label:hover {
-    background-color: var(--lumara-sunset-50);
+    background-color: var(--lumara-warm);
 }
 
 .radio-label input[type="radio"] {
@@ -594,7 +589,7 @@ body {
 }
 
 .info-card {
-    background: linear-gradient(135deg, var(--lumara-sunset-50), var(--lumara-night-50));
+    background: linear-gradient(135deg, var(--lumara-cream), var(--lumara-warm));
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -606,7 +601,7 @@ body {
 }
 
 .info-card h3 {
-    color: var(--lumara-gold);
+    color: var(--lumara-earth);
     font-size: 1.3rem;
     margin-bottom: 1rem;
     font-family: 'Poppins', sans-serif;
@@ -618,7 +613,7 @@ body {
 
 .info-card li {
     padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255,107,53,0.2);
+    border-bottom: 1px solid rgba(139, 69, 19, 0.2);
     position: relative;
     padding-left: 1.5rem;
 }
@@ -627,14 +622,14 @@ body {
     content: '•';
     position: absolute;
     left: 0;
-    color: var(--lumara-gold);
+    color: var(--lumara-earth);
     font-weight: bold;
 }
 
 /* Galería Section */
 .galeria {
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--lumara-night-50) 0%, var(--lumara-sunset-50) 100%);
+    background: linear-gradient(135deg, var(--lumara-warm) 0%, var(--lumara-cream) 100%);
 }
 
 .galeria-grid {
@@ -663,7 +658,7 @@ body {
 /* Contacto Section */
 .contacto {
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--lumara-sunset-100) 0%, var(--lumara-night-100) 100%);
+    background: linear-gradient(135deg, var(--lumara-warm) 0%, var(--lumara-cream) 100%);
 }
 
 .contacto-content {
@@ -680,14 +675,14 @@ body {
 }
 
 .contacto-info h3 {
-    color: var(--lumara-gold);
+    color: var(--lumara-earth);
     font-size: 1.8rem;
     margin-bottom: 1rem;
     font-family: 'Poppins', sans-serif;
 }
 
 .contacto-info a {
-    color: var(--lumara-gold);
+    color: var(--lumara-earth);
     text-decoration: none;
     font-weight: 600;
 }
@@ -706,7 +701,7 @@ body {
 .social-link {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: var(--lumara-gold);
+    background: var(--lumara-earth);
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -715,7 +710,7 @@ body {
 }
 
 .social-link:hover {
-    background: var(--lumara-orange);
+    background: var(--lumara-clay);
     transform: translateY(-2px);
 }
 
@@ -746,7 +741,7 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: rgba(15, 23, 42, 0.95);
+        background-color: rgba(28, 28, 28, 0.95);
         width: 100%;
         text-align: center;
         transition: 0.3s;
